@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="760" viewBox="0 0 2400 760">
+<rect width="2400" height="760" fill="#0A1F44"/>
+<rect x="40" y="40" width="2320" height="680" fill="none" stroke="#C9A24A" stroke-width="4"/>
+<path d="M529.6 414.7L469.6 449.3L409.6 414.7L409.6 345.3L469.6 310.7L529.6 345.3Z" fill="none" stroke="#C9A24A" stroke-width="10.85"/><path d="M459.8 535.6L399.8 570.2L339.8 535.6L339.8 466.2L399.8 431.6L459.8 466.2Z" fill="none" stroke="#C9A24A" stroke-width="10.85"/><path d="M320.2 535.6L260.2 570.2L200.2 535.6L200.2 466.2L260.2 431.6L320.2 466.2Z" fill="none" stroke="#C9A24A" stroke-width="10.85"/><path d="M250.4 414.7L190.4 449.3L130.4 414.7L130.4 345.3L190.4 310.7L250.4 345.3Z" fill="none" stroke="#C9A24A" stroke-width="10.85"/><path d="M320.2 293.8L260.2 328.4L200.2 293.8L200.2 224.4L260.2 189.8L320.2 224.4Z" fill="none" stroke="#C9A24A" stroke-width="10.85"/><path d="M459.8 293.8L399.8 328.4L339.8 293.8L339.8 224.4L399.8 189.8L459.8 224.4Z" fill="none" stroke="#C9A24A" stroke-width="10.85"/><path d="M390.0 414.7L330.0 449.3L270.0 414.7L270.0 345.3L330.0 310.7L390.0 345.3Z" fill="#C9A24A"/><path d="M 277.3 380 Q 330 339.7 382.7 380 Q 330 420.3 277.3 380 Z" fill="#0A1F44"/><circle cx="330" cy="380" r="17.05" fill="#C9A24A"/>
+<text x="560" y="390" font-family="LSerB" font-weight="700" font-size="170" fill="#C9A24A" letter-spacing="18">MORGAN</text>
+<text x="560" y="575" font-family="LSerB" font-weight="700" font-size="170" fill="#C9A24A" letter-spacing="18">SWARMLEY</text>
+<line x1="565" y1="625" x2="2280" y2="625" stroke="#C9A24A" stroke-width="3"/>
+<text x="565" y="685" font-family="LSer" font-size="46" fill="#E8DDBE" letter-spacing="20">BE YOUR OWN BANK</text>
+</svg>
