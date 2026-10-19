@@ -1,17 +1,23 @@
 # moneycanbuy.fun infographics: card spec
 
-12 static cards. Each card answers one question. Every number on a card is in `numbers.json` (field `display`); no other number appears. Exempt: list numbers, the footer card number (e.g. `3/12`) and the names Launch 0-3. Brand assets are in `../explainers/brand/` (colors.md, fonts/, mark-transparent-1024.png, wordmark.png).
+12 static cards. Each card answers one question. Every number on a card is in `numbers.json` (field `display`); no other number appears. Exempt: list numbers, the footer card number (e.g. `3/12`) and the names Launch 0-3. Brand assets are in `../explainers/brand/` (colors.md, fonts/, mark-transparent-1024.png, wordmark.png). IMD files are in `../explainers/imd/` (imd-token-logo.png, identity.md NFT images nft-*.svg / nft-*.png, SOURCES.md).
 
 ## Frame rules (all cards)
 
 - Size 1080x1350 (all 12). Story size 1080x1920 for cards 1, 5, 7, 10, with a vertical time axis where the card has steps.
+- Safe margin: every element (text, icon, bar, arrow, line, box, image, mark, footer) stays at least 64 px from every edge of the frame.
+- Nothing overlaps: no text touches or crosses another text, an icon, an image, an arrow or a line. Arrows and lines end at the edge of a box and never cross a number or a word. At least 16 px between neighbouring boxes.
+- One thought per card. A dare, a payout and a trophy are never in the same block: each has its own box.
 - Background #000000, accent #3ECF7A, gold #F5C451 only on payout amounts, white text, secondary #9EA69F.
-- Quicksand Bold for headings and text, IBM Plex Mono for every number. Text at least 28 px. Contrast of text to its background at least 4.5:1.
-- Toad mark only as `mark-transparent-1024.png`, at most 96 px, in a corner. Never redrawn.
+- Burn = a red flame: filled, #FF4D2E with a #FFB020 core, at least 56 px high, next to every burn and every 0x…dEaD. Never green, never a drop shape. Red is used only for burns.
+- Quicksand Bold for headings and text, IBM Plex Mono for every number. Text size at 1080 px width: main text at least 32 px, small text (footnotes, labels, footer) at least 24 px, headings at least 56 px. Contrast of text to its background at least 4.5:1. Footnotes and examples may use the small size. If the text does not fit, shrink icons and gaps, never the text below these sizes and never the card text itself.
+- Toad mark only as `mark-transparent-1024.png`, at most 96 px, in a corner inside the 64 px margin. Never redrawn.
+- IMD swarm = `../explainers/imd/imd-token-logo.png` (the IMD coin), at most 160 px. NFTs = the supplied identity.md images, in a square frame. Used as is: no redraw, recolor, stretch or crop; words inside these images belong to the image.
 - Footer of every card: `moneycanbuy.fun` and the card number, e.g. `3/12`.
+- The launch tax appears only on card 10, where it is explained.
 - Every percent names its base: "4% of the reward = $4", never "4% of 5%".
 - Dollars only as the example reward of $100 USDC and its shares.
-- Icons are simple shapes (wallet, NFT frame, hammer, scales, flame, padlock). No people, faces, hands, avatars, photos.
+- Icons are simple shapes (wallet, NFT frame, hammer, scales, flame, padlock). No people, faces, hands, avatars, photos; the supplied NFT images are the only exception.
 
 ## Forbidden on every card
 
@@ -46,6 +52,7 @@ Card text below is the text on the card. Layout notes are in brackets.
 2. NFT vote: 1 NFT = 1 vote. Each holder votes for themselves. An NFT votes once per dispute, no side change.
 3. Three results: Decided at once (lead of 20) · Decided at the end (lead of 10) · No decision.
 4. Swarm: appeal of the NFT decision, or a call after No decision. Anyone can call. Panel of 7 agents, quorum 5, yes/no answer is final.
+[images] NFT vote: one identity.md NFT image in a frame. Swarm: the IMD coin with 7 identity.md NFT images in a row as the 7 agents.
 5. Swarm silent → a new 24 h window. After the 3rd silence the result stands as without the swarm.
 6. No decision and no swarm call → the submission is accepted.
 [footnote] Small dares: if NFT holders do not vote, the swarm decides.
@@ -57,6 +64,7 @@ Card text below is the text on the card. Layout notes are in brackets.
 3. NFT wrong (the swarm overturned) or no decision: 100% to the winning side.
 4. The winner always gets its own bond back. An outside appellant who wins first gets 0.5 IMD from the loser's IMD bond.
 [footnote] Split separately in IMD and in the reward's currency. Swarm fees are not refunded.
+[small footnote, 24 px] The 0.5 IMD goes back to an outside appellant only if the loser's bond still holds IMD; otherwise it is not refunded.
 [example] Fake proof on $100 USDC: doer bond 0.5 IMD + 3 USDC → 0.25 IMD + 1.5 USDC to the disputer, 0.25 IMD + 1.5 USDC to the NFT voters who voted right. The reward stays in the dare.
 
 ### 5. Where $100 Goes
@@ -81,6 +89,7 @@ Card text below is the text on the card. Layout notes are in brackets.
 ### 7. WILL DO / WON'T DO
 [story size: vertical]
 1. Entry of 100 YOLO: 90 to the side's pool · 5 burn at the outcome · 5 wait for the outcome.
+[layout] The 90 / 5 / 5 split in one row of three separate boxes, the red flame only on the burning 5.
 2. Weight = (time left / whole term)², term counted from dare creation. Early entries weigh more.
 3. Entries until the deadline, paused while a submission is under review, no withdrawal, open to anyone.
 4. Done → WILL DO takes its 90 + the losers' pool by weight. The waiting 5% → 2.5% to the author, 2.5% to the doer.
@@ -95,11 +104,10 @@ Card text below is the text on the card. Layout notes are in brackets.
 2. YOLO add-on fee 10% of the add-on → the same rule; the treasury part burns.
 3. Predict: 5% of every entry → 0x…dEaD at the outcome; the waiting 5% → author and doer, or 0x…dEaD.
 4. Trophy: 7,777 YOLO → 0x…dEaD.
-5. First-hour tax in YOLO → treasury → burned.
-6. Pool fee: 1% of YOLO/IMD pool volume → treasury; its YOLO side → burned.
-7. Loser bonds → winners and NFT voters. Swarm fees → the swarm.
-8. Burn button: YOLO to 0x…dEaD. Send button: ETH, USDC, IMD to the buyback wallet. Anyone can press, no reward for pressing.
-[layout] The line from the buyback wallet onward is dashed and labelled "by hand".
+5. Pool fee: 1% of YOLO/IMD pool volume → treasury; its YOLO side → burned.
+6. Loser bonds → winners and NFT voters. Swarm fees → the swarm.
+7. Burn button: YOLO to 0x…dEaD. Send button: ETH, USDC, IMD to the buyback wallet. Anyone can press, no reward for pressing.
+[layout] The line from the buyback wallet onward is dashed and labelled "by hand". The trophy row is its own box, apart from the dare fee rows. A red flame on 0x…dEaD.
 
 ### 9. YOLO Supply and Unlocks
 [bars, not a pie]
@@ -123,7 +131,7 @@ Card text below is the text on the card. Layout notes are in brackets.
 [example] Sell 1,000 YOLO at 30%: 700 to the pool, 300 tax. At most 70% of a balance can be sold in the window.
 
 ### 11. Who's Who
-[8 role tiles: can / pays / can get]
+[8 role tiles: can / pays / can get; NFT holder tile shows one identity.md NFT image, IMD swarm tile shows the IMD coin]
 1. Author: posts a dare, can also do it. Pays the reward. Can get: the reward back (not done or cancelled), 2.5% of entries, half or all of an empty-side pool.
 2. Doer: submits proof with reasons. Pays a bond. Can get: 90% of the reward (up to 94% with a stake), 2.5% of entries.
 3. Disputer: disputes a submission. Pays a bond. Can get: the loser's bond (50% or 100%).
@@ -141,4 +149,9 @@ Card text below is the text on the card. Layout notes are in brackets.
 3. Launch 2 (core): YoloLockHub (stakes), CaseDesk, DisputeDesk, TaskVault (rewards and bonds; users talk only to it).
 4. Launch 3: YoloSweetener (add-ons), TrophyCatalog, DareTrophy, ProtocolDirectory, HiddenList, YoloPredict (entries).
 5. Outside: IMD swarm (Intake); treasury, buyback and dev wallets.
+[images] The IMD swarm box shows the IMD coin.
 6. No server, no keeper. Each step is done by whoever calls it. Each launch fits 16,777,216 gas.
+
+## Check every card
+
+Measure the rendered card, not the source. For every PNG list every element (text box, icon, image, bar, arrow, line, mark, footer) with its box x, y, width, height in px, taken from the render (getBoundingClientRect or getBBox). Fail the card if an element is less than 64 px from an edge, if two text boxes intersect, if a text box intersects an icon, image, arrow or line other than its own container, if main text is under 32 px or small text under 24 px. Every card must pass with 0 fails. Put all cards on one contact sheet to compare them side by side.

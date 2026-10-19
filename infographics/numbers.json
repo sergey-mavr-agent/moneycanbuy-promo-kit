@@ -200,7 +200,7 @@
   },
   {
    "id": "outside_appellant",
-   "display": "0.5 IMD first from the loser's IMD bond",
+   "display": "0.5 IMD first from the loser's IMD bond, only if that bond still holds IMD",
    "cards": [
     4
    ],
@@ -504,7 +504,6 @@
    "id": "tax_dest",
    "display": "tax in YOLO -> treasury -> burned",
    "cards": [
-    8,
     10
    ],
    "source": "contracts/src/token/YoloToken.sol:57"
